@@ -22,7 +22,7 @@ Process will take a while to output matplotlib plots. With current 64 cells in e
 - Last row is QDSMC approach with only 4 particles per cell! Super accurate for a very low memory and relatively low runtime requirements
 
 ### Why
-Right now particle in cell methods are very costly in both space and runtime requirements. So we use QDSMC, an algorithm provided by Albright et al. [^1] to use less memory and improve runtime while also reducing the amount of noise that accompanies the procedure.
+Right now particle in cell methods are very costly in both space and runtime requirements. So we use QDSMC, an algorithm provided by Albright et al.[^1] to use less memory and improve runtime while also reducing the amount of noise that accompanies the procedure.
 This method can now be used to simulate real life experiments and use the result of the simulations instead of a physical experiments. 
 So combined with the runtime improvement, this method will be used for the University of Rochester Laboratory for Laser Energetics for their simulations.
 And we were able to expand Albright's algorithm to 3D allowing more verstaile and realistic use.
@@ -35,4 +35,4 @@ And we were able to expand Albright's algorithm to 3D allowing more verstaile an
 - Euler equations used
 - Velocity, temperature, pressure, and other properties computed, by use of the Euler equations
 
-[^1] Quiet direct simulation of Eulerian fluids by Albright et al
+[^1]: Quiet direct simulation of Eulerian fluids by Albright et al
