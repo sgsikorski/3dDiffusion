@@ -14,7 +14,7 @@ python3 3dDiffusion2.py
 ```
 Process will take a while to output matplotlib plots. With current 64 cells in each dimension, 64^3 total cells, DSMC plots take about 15 minutes to compute while QDSMC plots take about 27 minutes to compute.
 
-![Plots of 3d Diffusion Model](https://github.com/sgsikorski/3dDiffusion/endResults3dDiff.jiff)
+![Plots of 3d Diffusion Model](https://github.com/sgsikorski/3dDiffusion/blob/main/endResults3dDiff.jfif)
 
 ### Features
 - Creates 12 plots. Of each row, the 3 plots are slices through the middle of each axis.
