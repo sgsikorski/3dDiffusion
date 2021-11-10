@@ -35,4 +35,4 @@ And we were able to expand Albright's algorithm to 3D allowing more verstaile an
 - Euler equations used
 - Velocity, temperature, pressure, and other properties computed, by use of the Euler equations
 
-[^1]: Quiet direct simulation of Eulerian fluids by Albright et al
+[^1]: [Quiet direct simulation of Eulerian fluids by Albright et al](https://github.com/sgsikorski/3dDiffusion/blob/main/Albright_PhysRevE.65.055302_2002.pdf)
