@@ -1,5 +1,5 @@
 # 3dDiffusion
-3dDiffusion2.py
+3dDiffusion.py
 
 3d diffusion equation solver
 
@@ -10,7 +10,7 @@ Still in the process of being updated, adding features, and optimizing the algor
 
 ### To Execute
 ``` 
-python3 3dDiffusion2.py
+python3 3dDiffusion.py
 ```
 Process will take a while to output matplotlib plots. With current 64 cells in each dimension, 64^3 total cells, DSMC plots take about 15 minutes to compute while QDSMC plots take about 27 minutes to compute.
 
