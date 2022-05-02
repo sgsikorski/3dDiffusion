@@ -1,0 +1,46 @@
+# Plot the hdf5 with matplotlib
+import matplotlib.pyplot as plot
+import numpy as np
+
+xmin = ymin = zmin = -1.0
+xmax = ymax = zmax = 1.0
+xN = yN = zN = 100
+
+density = np.zeros(((xN, yN, zN)))
+xx = np.linspace(xmin,xmax,xN)
+yy = np.linspace(ymin,ymax,yN)
+zz = np.linspace(zmin,zmax,zN)
+dx = (xmax - xmin) / xN
+dy = (ymax - ymin) / yN
+dz = (zmax - zmin) / zN
+V = dx * dy * dz
+
+X1, Y1 = np.meshgrid(xx,yy)
+X2, Y2 = np.meshgrid(xx,zz)
+X3, Y3 = np.meshgrid(yy,zz)
+
+f = open('CudaPoints/100_QDSMC.hdf5', 'r')
+f.readline()
+f.readline()
+for line in f:
+    xyz = line.split(':')
+    x = xyz[1][:-1]
+    y = xyz[2][:-1]
+    z = xyz[3][:-1]
+    density[int(x), int(y), int(z)] = xyz[4][:-1]
+
+fig, ax = plot.subplots(1, 3, figsize=(12,4))
+plot.suptitle("Density graphs for 100x100x100")
+cf1 = ax[0].contourf(X1, Y1, density[:,:,int(zN/2)], 20, cmap='RdGy')
+cf2 = ax[1].contourf(X2, Y2, density[:,int(yN/2),:], 20, cmap='RdGy')
+cf3 = ax[2].contourf(X3, Y3, density[int(xN/2),:,:], 20, cmap='RdGy')
+
+ax[0].set_title(f"QDS (ppc=4) Density(z=0)")
+ax[1].set_title(f"QDS (ppc=4) Density(y=0)")
+ax[2].set_title(f"QDS (ppc=4) Density(z=0)")
+
+cax = plot.axes([0.925,0.1,0.02,0.8])
+fig.colorbar(cf1, cax=cax)
+plot.savefig('100QDSMC.jpg')
+
+plot.show()
