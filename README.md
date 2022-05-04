@@ -6,6 +6,9 @@
 Written by Scott Sikorski and Adam B. Sefkow
 Last revised October 21, 2021
 
+Code also implemented using Cuda; however, cannot be shared at the current moment.
+Check back at a later time t see.
+
 Still in the process of being updated, adding features, and optimizing the algorithm.
 
 ### To Execute
